@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 
 #include "dijkstras.h"
-// #include "ladder.h"
+#include "ladder.h"
 
 TEST(Dijkstra, find_shortest_path) {
   Graph G;
@@ -20,4 +20,8 @@ TEST(Dijkstra, find_shortest_path) {
   print_path(path, distances[3]);
 
   EXPECT_TRUE(distances == test_distance_values);
+}
+
+TEST(Word_Ladder, find_ladder) {
+  verify_word_ladder();
 }
